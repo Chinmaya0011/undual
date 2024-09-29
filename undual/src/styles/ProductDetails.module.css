@@ -1,115 +1,194 @@
 .productDetails {
-    padding: 20px;
-    max-width: 800px; /* Limit the width of the details section */
-    margin: auto; /* Center the details section */
-    border: 1px solid #ccc; /* Border around product details */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 20px;
+  max-width: 800px; /* Limit the width of the details section */
+  margin: auto; /* Center the details section */
+  border: 1px solid #ccc; /* Border around product details */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  display: flex; /* Enable flexbox layout */
+  gap: 20px; /* Space between image and details */
+}
+
+.productImageContainer {
+  flex: 1; /* Take up half the space */
+}
+
+.productDetailsContent {
+  flex: 1; /* Take up half the space */
+  display: flex;
+  flex-direction: column; /* Stack details vertically */
+}
+
+.productTitle {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333; /* Dark color for better readability */
+  font-family: 'Arial', sans-serif; /* Consistent font style */
+}
+
+.productImage {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is block-level for centering */
+  margin: 0 auto; /* Center the image */
+  border-radius: 8px; /* Rounded corners for image */
+}
+
+.productTable {
+  width: 100%; /* Full width of the container */
+  border-collapse: collapse; /* Merge borders */
+  margin-top: 20px; /* Space between image and table */
+}
+
+.tableLabel {
+  font-weight: bold; /* Bold labels */
+  padding: 8px;
+  background-color: #f0f0f0; /* Light gray background for labels */
+  color: #555; /* Darker color for labels */
+}
+
+.tableValue {
+  padding: 8px;
+  border-bottom: 1px solid #ddd; /* Bottom border for separation */
+  color: #333; /* Darker color for values */
+}
+
+.reviewsTitle {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #333; /* Darker color for title */
+  font-family: 'Arial', sans-serif; /* Consistent font style */
+  border-bottom: 2px solid #007bff; /* Underline effect */
+  padding-bottom: 5px; /* Space below title */
+}
+
+.reviewsContainer {
+  display: flex;
+  flex-direction: column; /* Stack reviews vertically */
+  gap: 15px; /* Space between reviews */
+}
+
+.reviewItem {
+  border: 1px solid #ddd; /* Border around each review */
+  border-radius: 8px; /* Rounded corners for review item */
+  padding: 15px; /* Padding inside review item */
+  background-color: #f9f9f9; /* Light background for reviews */
+  transition: box-shadow 0.3s; /* Smooth transition for shadow effect */
+}
+
+.reviewItem:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between; /* Space between rating and date */
+  align-items: center; /* Align items in the center */
+}
+
+.reviewRating {
+  font-weight: bold; /* Bold rating */
+  color: #ffcc00; /* Gold color for rating */
+}
+
+.reviewComment {
+  margin: 10px 0; /* Margin above and below comment */
+  font-style: italic; /* Italic comment for emphasis */
+  color: #444; /* Slightly darker color for comments */
+}
+
+.reviewReviewer {
+  font-size: 12px; /* Smaller font for reviewer name */
+  color: #555; /* Lighter color for reviewer name */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .productDetails {
+    flex-direction: column; /* Stack items vertically on smaller screens */
   }
-  
+
+  .productImageContainer,
+  .productDetailsContent {
+    flex: none; /* Reset flex properties */
+    width: 100%; /* Full width */
+  }
+
   .productTitle {
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-align: center;
+    font-size: 24px; /* Smaller title font */
   }
-  
+
   .productImage {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure the image is block-level for centering */
-    margin: 0 auto; /* Center the image */
-    border-radius: 8px; /* Rounded corners for image */
+    max-width: 100%; /* Ensure the image scales down */
   }
-  
-  .productTable {
-    width: 100%; /* Full width of the container */
-    border-collapse: collapse; /* Merge borders */
-    margin-top: 20px; /* Space between image and table */
-  }
-  
-  .tableLabel {
-    font-weight: bold; /* Bold labels */
-    padding: 8px;
-    background-color: #f0f0f0; /* Light gray background for labels */
-  }
-  
+
+  .tableLabel,
   .tableValue {
-    padding: 8px;
-    border-bottom: 1px solid #ddd; /* Bottom border for separation */
+    font-size: 14px; /* Smaller font size for table */
   }
-  
+
   .reviewsTitle {
-    margin-top: 20px;
-    font-size: 22px;
+    font-size: 20px; /* Smaller reviews title */
   }
-  
-  .reviewsContainer {
-    display: flex;
-    flex-direction: column; /* Stack reviews vertically */
-    gap: 15px; /* Space between reviews */
-  }
-  
-  .reviewItem {
-    border: 1px solid #ddd; /* Border around each review */
-    border-radius: 8px; /* Rounded corners for review item */
-    padding: 15px; /* Padding inside review item */
-    background-color: #f9f9f9; /* Light background for reviews */
-    transition: box-shadow 0.3s; /* Smooth transition for shadow effect */
-  }
-  
-  .reviewItem:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
-  }
-  
-  .reviewHeader {
-    display: flex;
-    justify-content: space-between; /* Space between rating and date */
-    align-items: center; /* Align items in the center */
-  }
-  
-  .reviewRating {
-    font-weight: bold; /* Bold rating */
-  }
-  
-  .reviewComment {
-    margin: 10px 0; /* Margin above and below comment */
-    font-style: italic; /* Italic comment for emphasis */
-  }
-  
+
+  .reviewRating,
+  .reviewComment,
+  .reviewDate,
   .reviewReviewer {
-    font-size: 12px; /* Smaller font for reviewer name */
-    color: #555; /* Lighter color for reviewer name */
+    font-size: 12px; /* Smaller font for reviews */
   }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .productDetails {
-      padding: 10px; /* Reduce padding on smaller screens */
-    }
-  
-    .productTitle {
-      font-size: 24px; /* Smaller title font */
-    }
-  
-    .productImage {
-      max-width: 100%; /* Ensure the image scales down */
-    }
-  
-    .tableLabel,
-    .tableValue {
-      font-size: 14px; /* Smaller font size for table */
-    }
-  
-    .reviewsTitle {
-      font-size: 20px; /* Smaller reviews title */
-    }
-  
-    .reviewRating,
-    .reviewComment,
-    .reviewDate,
-    .reviewReviewer {
-      font-size: 12px; /* Smaller font for reviews */
-    }
+}
+
+@media (max-width: 480px) {
+  .productTitle {
+    font-size: 20px; /* Even smaller title on very small screens */
   }
-  
+
+  .tableLabel,
+  .tableValue {
+    font-size: 12px; /* Smaller font size for table labels and values */
+  }
+
+  .reviewsTitle {
+    font-size: 18px; /* Smaller reviews title */
+  }
+
+  .reviewItem {
+    padding: 10px; /* Less padding for review items */
+  }
+}
+.buttonContainer {
+  justify-content: center;
+  display: flex; /* Use flexbox for horizontal alignment */
+  margin-top: 15px; /* Space between the image and buttons */
+}
+
+.addToCartButton, .buyNowButton {
+  margin-right: 10px;
+  padding: 10px 20px; /* Padding inside buttons */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.addToCartButton {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+}
+
+.addToCartButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.buyNowButton {
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+}
+
+.buyNowButton:hover {
+  background-color: #218838; /* Darker green on hover */
+}

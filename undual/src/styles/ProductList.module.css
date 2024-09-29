@@ -23,11 +23,11 @@
 
 .productItem {
   border: 1px solid #ddd; /* Light border for product item */
-  border-radius: 12px; /* Increased border radius */
+  border-radius: 12px; /* Border radius for smooth corners */
   padding: 15px;
   margin: 10px;
   cursor: pointer; /* Change cursor to pointer */
-  transition: transform 0.2s, box-shadow 0.2s; /* Animation for hover effect */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Smoother animation for hover effect */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,15 +38,29 @@
 }
 
 .productItem:hover {
-  border-radius: 0px;
-  background-color: #9ec785cb;
-  box-shadow: 0 6px 20px rgba(47, 66, 235, 0.721); /* Darker shadow on hover */
+  border-radius: 12px; /* Maintain the same radius on hover */
+  background-color: #c4e3c4; /* Slightly different shade for hover effect */
+  transform: translateY(-5px); /* Lift the item slightly on hover */
+  box-shadow: 0 8px 25px rgba(47, 66, 235, 0.5); /* Darker and larger shadow on hover */
 }
+
+.productThumbnail {
+  max-width: 100%; /* Ensure the image doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Slightly smaller rounded corners for image */
+  transition: transform 0.2s ease-in-out; /* Animation for image on hover */
+}
+
+.productItem:hover .productThumbnail {
+  transform: scale(1.05); /* Slight zoom-in effect on image when hovering over item */
+}
+
 
 .productThumbnail {
   max-width: 100%; /* Responsive image */
   height: auto; /* Maintain aspect ratio */
   border-radius: 10px; /* Rounded corners for image */
+
 }
 
 .productTitle {

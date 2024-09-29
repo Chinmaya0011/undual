@@ -1,0 +1,163 @@
+.header {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.logoLink {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navItem {
+  margin-right: 2rem;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #ccc;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.categorySelect {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.categoryOption {
+  padding: 0.5rem 1rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.searchInput {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 20rem;
+}
+
+.searchButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #444;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.searchButton:hover {
+  background-color: #555;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cartIcon {
+  font-size: 1.5rem;
+}
+
+.cartCount {
+  font-size: 1rem;
+  background-color: #ff69b4;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  color: #fff;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .navItem {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .categories {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  .search {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  .searchInput {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .navItem {
+    margin-bottom: 0.5rem;
+  }
+  .categories {
+    margin-bottom: 0.5rem;
+  }
+  .search {
+    margin-bottom: 0.5rem;
+  }
+  .cart {
+    font-size: 1rem;
+  }
+}
+

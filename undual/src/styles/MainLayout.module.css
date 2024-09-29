@@ -1,0 +1,123 @@
+/* src/styles/MainLayout.module.css */
+
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333; /* Darker color for the title */
+    margin-bottom: 20px;
+  }
+  
+  .searchCategoryContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    gap: 20px; /* Spacing between search and category selector */
+  }
+  
+  .loading {
+    font-size: 18px;
+    color: #007bff; /* Blue color for loading text */
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .error {
+    font-size: 18px;
+    color: red; /* Red color for error text */
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .productDisplayContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination button:disabled {
+    background-color: #b0bec5;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    font-size: 18px;
+    color: #333;
+    margin: 0 15px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .appContainer {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 28px; /* Smaller title on smaller screens */
+    }
+  
+    .searchCategoryContainer {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: stretch; /* Full width */
+      width: 100%; /* Full width */
+    }
+  
+    .searchCategoryContainer > * {
+      margin-bottom: 10px; /* Add spacing between stacked elements */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 24px; /* Even smaller title on very small screens */
+    }
+  
+    .loading,
+    .error {
+      font-size: 16px; /* Smaller text for loading/error messages */
+    }
+  
+    .pagination button {
+      padding: 8px 12px; /* Smaller button size */
+    }
+  
+    .pagination span {
+      font-size: 16px; /* Smaller pagination text */
+    }
+  }
+  
