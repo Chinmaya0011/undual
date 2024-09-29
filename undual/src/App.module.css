@@ -1,0 +1,54 @@
+/* src/App.module.css */
+.appContainer {
+  max-width: 1200px; /* Maximum width of the app */
+  margin: 0 auto; /* Center the app */
+  padding: 20px; /* Padding around the app */
+  background-color: ivory; /* Background color for the app */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.title {
+  color: darkgreen; /* Title color */
+  text-align: center; /* Center title */
+  margin-bottom: 20px; /* Space below title */
+}
+
+.searchCategoryContainer {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between elements */
+  margin-bottom: 20px; /* Space below the container */
+}
+
+.searchCategoryContainer > * {
+  flex: 1; /* Each child takes up equal space */
+  margin-right: 10px; /* Space between items */
+}
+
+.searchCategoryContainer > *:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .appContainer {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .title {
+    font-size: 1.8em; /* Adjust title size */
+  }
+
+  .searchCategoryContainer {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .searchCategoryContainer > * {
+    margin-right: 0; /* Remove right margin when stacked */
+    margin-bottom: 10px; /* Add space between stacked elements */
+  }
+
+  .searchCategoryContainer > *:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last item */
+  }
+}

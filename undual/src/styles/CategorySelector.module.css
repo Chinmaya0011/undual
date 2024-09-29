@@ -1,0 +1,39 @@
+.categorySelector {
+  background-color: ivory; /* Background color */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.title {
+  color: darkgreen; /* Title color */
+  margin-bottom: 10px;
+}
+
+.categorySelect {
+  padding: 10px;
+  border: 1px solid darkgreen; /* Border color */
+  border-radius: 4px;
+  background-color: white; /* Background for the select */
+  color: darkgreen; /* Text color */
+  cursor: pointer;
+}
+
+.option {
+  background-color: ivory; /* Option background */
+  color: darkgreen; /* Option text color */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .categorySelector {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.5em; /* Adjust title size */
+  }
+
+  .categorySelect {
+    width: 100%; /* Full width on small screens */
+  }
+}

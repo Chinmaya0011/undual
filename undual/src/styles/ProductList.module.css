@@ -1,0 +1,102 @@
+.productList {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: space-between; /* Distribute space between items */
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+}
+
+.noProducts {
+  text-align: center;
+  font-size: 18px;
+}
+
+.productItem {
+  border: 1px solid #ddd; /* Light border for product item */
+  border-radius: 12px; /* Increased border radius */
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer; /* Change cursor to pointer */
+  transition: transform 0.2s, box-shadow 0.2s; /* Animation for hover effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 calc(30% - 20px); /* Three items in a row for large screens */
+  background-color: #ffffff; /* White background for product items */
+  box-shadow: 0 4px 15px rgba(116, 214, 117, 0.75); /* Soft shadow for depth */
+}
+
+.productItem:hover {
+  border-radius: 0px;
+  background-color: #9ec785cb;
+  box-shadow: 0 6px 20px rgba(47, 66, 235, 0.721); /* Darker shadow on hover */
+}
+
+.productThumbnail {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for image */
+}
+
+.productTitle {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333; /* Darker text color */
+}
+
+.productPrice {
+  font-size: 16px;
+  color: #555; /* Slightly darker text */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.paginationButton {
+  margin: 0 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s; /* Include transform transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
+}
+
+.paginationButton:disabled {
+  background-color: #ccc; /* Disable button styling */
+  cursor: not-allowed; /* Change cursor */
+}
+
+.paginationButton:hover:not(:disabled) {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift button on hover */
+}
+
+.paginationText {
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .productItem {
+    flex: 1 1 calc(100% - 20px); /* Stack items on smaller screens */
+  }
+}
