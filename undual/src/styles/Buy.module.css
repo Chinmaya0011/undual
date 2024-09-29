@@ -82,3 +82,25 @@ h2 {
   color: red;
   text-align: center;
 }
+/* src/styles/Buy.module.css */
+
+.confirmation {
+  text-align: center;
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid #4caf50; /* Success color */
+  background-color: #e8f5e9; /* Light green background */
+  border-radius: 8px;
+}
+
+.tickIcon {
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 2rem;
+}
+
+/* Other styles remain unchanged */
