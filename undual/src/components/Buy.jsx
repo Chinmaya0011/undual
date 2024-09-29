@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { completeBuy, cancelBuy } from '../redux/buySlice'; // Assuming these actions are defined
 import styles from '../styles/Buy.module.css';
-
+import Header from './Header';
 const Buy = () => {
   const navigate = useNavigate(); // To navigate back if needed
   const dispatch = useDispatch();
@@ -34,6 +34,8 @@ const Buy = () => {
   };
 
   return (
+    <><Header/>
+   
     <div className={styles.buyModal}>
       <h2>Confirm Purchase</h2>
       <div className={styles.itemsList}>
@@ -53,6 +55,7 @@ const Buy = () => {
         <button onClick={handleCancel} className={styles.cancelButton}>Cancel</button>
       </div>
     </div>
+     </>
   );
 };
 

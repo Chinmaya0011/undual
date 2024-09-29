@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { removeFromCart, clearCart, updateQuantity } from '../redux/cartSlice';
 import styles from '../styles/Cart.module.css';
-
+import Header from './Header';
 const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -33,6 +33,7 @@ const Cart = () => {
   };
 
   return (
+    <><Header/>
     <div className={styles.cart}>
       <h2>Your Cart</h2>
       {cartItems.length === 0 ? (
@@ -62,6 +63,7 @@ const Cart = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

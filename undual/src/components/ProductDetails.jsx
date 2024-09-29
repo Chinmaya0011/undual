@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 import { addToCart } from '../redux/cartSlice'; // Import the addToCart action
 import styles from '../styles/ProductDetails.module.css';
-
+import Header from './Header';
 const ProductDetails = () => {
   const { id } = useParams(); // Get the product ID from the URL parameters
   const products = useSelector((state) => state.products.products); // Get the products from the Redux store
@@ -28,8 +28,9 @@ const ProductDetails = () => {
     navigate('/buy', { state: { product } }); // Pass product info as state
   };
 
-  return (
+  return (<> <Header/>
     <div className={styles.productDetails}>
+     
       <div className={styles.productImageContainer}>
         <img src={product.thumbnail} alt={product.title} className={styles.productImage} />
         <div className={styles.buttonContainer}>
@@ -98,6 +99,7 @@ const ProductDetails = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 
