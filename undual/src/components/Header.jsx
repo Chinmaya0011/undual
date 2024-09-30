@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link to="/" className={styles.logoLink}>UnDual</Link>
+        <Link to="/" className={styles.logoLink}>QuickCart</Link>
       </div>
      
       <div className={styles.categories}>
